@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot Flowise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(60, 60, 120, 0.15);
+            padding: 32px 24px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2d3e50;
+            margin-bottom: 24px;
+        }
+
+        flowise-fullchatbot {
+            width: 100%;
+            display: block;
+        }
+
+        .logo-autotech {
+            display: block;
+            margin: 0 auto 16px auto;
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(60, 60, 120, 0.10);
+        }
+
+        .bienvenida {
+            text-align: center;
+            color: #4a6073;
+            margin-bottom: 24px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="imagenes/autotech logo.jpg" alt="Autotech Logotipo" class="logo-autotech">
+        <h1>Asesor Virtual</h1>
+        <p class="bienvenida">Bienvenido a Autotech. Car Audio, Alarmas y Aire Acondicionado. Nuestro asesor virtual
+            está aquí para ayudarte y responder tus consultas.</p>
+        <!-- El chatbot se integra fuera del contenedor principal -->
+    </div>
+    <flowise-fullchatbot></flowise-fullchatbot>
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.initFull({
+            chatflowid: "e02e754e-202b-4a97-a833-0a62ac309656",
+            apiHost: "https://cloud.flowiseai.com",
+        })
+    </script>
+</body>
+
+</html>
